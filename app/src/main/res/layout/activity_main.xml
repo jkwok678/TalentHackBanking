@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:visibility="visible"
     tools:context=".MainActivity">
 
     <TextView
@@ -16,11 +17,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="292dp" />
+        android:text="Click to start!"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="161dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
