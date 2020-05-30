@@ -16,29 +16,20 @@ public class SubscriptionModel {
     }
 
 
-    public void makeComparisions(Map<String, Double> things) {
+    public double compareTo(double costOfThing) {
 
 
-        for (Map.Entry<String, Double> thing : things.entrySet()) {
-            compareTo(thing.getKey(), thing.getValue());
-        }
-
-    }
-
-    private double compareTo(String thing, double costOfThing) {
         int tempCal = (int) (moneySpentThisYear / costOfThing);
-        System.out.print("You could have bought " + tempCal + " " + thing + (tempCal != 1 ? "s" : ""));
-        System.out.println(" instead of " + (int) (moneySpentThisYear / planCost) +
-                " months of " + planName + "! \n");
-        return tempCal;
-    }
 
+        return tempCal;
+
+    }
 
     public void setMoneySpentThisYear(double moneySpentThisYear) {
         this.moneySpentThisYear = moneySpentThisYear;
     }
 
-    public double getMoneySpentThisYear(double moneySpentThisYear) {
+    public double getMoneySpentThisYear(){
         return moneySpentThisYear;
     }
 
@@ -75,13 +66,9 @@ public class SubscriptionModel {
         this.planCost = planCost;
     }
 
-    public void compareHours(SubscriptionModel m2) {
+    public int compareHours(SubscriptionModel m2) {
         int difference = (int) last30Hours - (int) m2.getLast30Hours();
-        if (difference > 10) {
-            System.out.println("You have used " + planName + " much more than "
-                    + m2.getPlanName());
-            System.out.println("Literally " + difference + " hours more!!!");
-            System.out.println("Do you really need " + m2.getPlanName());
+        return difference;
         }
-    }
+
 }
