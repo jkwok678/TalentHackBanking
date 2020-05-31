@@ -34,6 +34,8 @@ public class AssistantActivity extends AppCompatActivity {
         model1.setMoneySpentThisYear(49.55); // Set money spent this year
         String firstThing = "Tesco's meal deal";
 
+
+        //ArrayList to hold all the text that the user will see
         final ArrayList<String> text = new ArrayList<String>();
         text.add("Here's some data I've compiled for you on your subscriptions!");
         for (Map.Entry<String, Double> thing : things.entrySet()) {
@@ -58,6 +60,7 @@ public class AssistantActivity extends AppCompatActivity {
                 " per hour");
 
         int difference = model1.compareHours(model2);
+        // If the user uses model1 a lot more than 2 output text.
         if (difference > 10) {
             text.add("You have used " + model1.getPlanName() + " much more than "
                     + model2.getPlanName());
@@ -65,6 +68,7 @@ public class AssistantActivity extends AppCompatActivity {
             text.add("Do you really need " + model2.getPlanName() + " when you have " +
                     model1.getPlanName() + "?");
         }
+        // Button to advance to chatBot/AI
         final Button button = findViewById(R.id.continueButton);
         final TextView speechText = findViewById(R.id.speech);
 

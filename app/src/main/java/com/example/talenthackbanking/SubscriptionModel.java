@@ -18,9 +18,7 @@ public class SubscriptionModel {
 
     public double compareTo(double costOfThing) {
 
-
         int tempCal = (int) (moneySpentThisYear / costOfThing);
-
         return tempCal;
 
     }
@@ -29,13 +27,15 @@ public class SubscriptionModel {
         this.moneySpentThisYear = moneySpentThisYear;
     }
 
-    public double getMoneySpentThisYear(){
+    public double getMoneySpentThisYear() {
         return moneySpentThisYear;
     }
 
 
-    public double cost_per_hour() {
-        return (this.planCost / this.last30Hours);
+    public double costPerHour() {
+
+        double costPerHour = this.planCost / this.last30Hours;
+        return costPerHour;
     }
 
     public String getPlanName() {
@@ -69,6 +69,6 @@ public class SubscriptionModel {
     public int compareHours(SubscriptionModel m2) {
         int difference = (int) last30Hours - (int) m2.getLast30Hours();
         return difference;
-        }
+    }
 
 }

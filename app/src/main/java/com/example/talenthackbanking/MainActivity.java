@@ -18,12 +18,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //Main screen with just 3 buttons, opens 3 other screens
         final Button button = findViewById(R.id.goAssist);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, AssistantActivity.class));
-                // Code here executes on main thread after user presses button
+
             }
         });
 
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View c) {
                 startActivity(new Intent(MainActivity.this, BreakdownActivity.class));
-                // Code here executes on main thread after user presses button
+
             }
         });
 
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View c) {
                 startActivity(new Intent(MainActivity.this, Breakdown2Activity.class));
-                // Code here executes on main thread after user presses button
+
             }
         });
 

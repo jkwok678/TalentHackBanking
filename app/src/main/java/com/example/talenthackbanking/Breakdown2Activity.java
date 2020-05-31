@@ -19,22 +19,20 @@ public class Breakdown2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.breakdown2_screen);
-
+        //Create Piechart
         PieChart pie2 = findViewById(R.id.piechart2);
         pie2.setUsePercentValues(true);
 
-
-        ArrayList <PieEntry> valueList2 = new ArrayList<>();
+        //Store all data in valueList2
+        ArrayList<PieEntry> valueList2 = new ArrayList<>();
         valueList2.add(new PieEntry((float) 0.08, "Subscriptions"));
         valueList2.add(new PieEntry((float) 0.2, "utilities"));
         valueList2.add(new PieEntry((float) 0.3, "food"));
         valueList2.add(new PieEntry((float) 0.2, "travel"));
         valueList2.add(new PieEntry((float) 0.22, "other"));
 
-
+        //Get the data into a form that we can display
         PieDataSet dataSet2 = new PieDataSet(valueList2, "Spend 2020 so far ");
-
-
         PieData pieData2 = new PieData(dataSet2);
 
         pie2.setData(pieData2);

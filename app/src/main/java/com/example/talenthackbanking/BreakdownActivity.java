@@ -17,10 +17,12 @@ public class BreakdownActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Find the pieChart on screen
         setContentView(R.layout.breakdown_screen);
         PieChart pie = findViewById(R.id.piechart);
         pie.setUsePercentValues(true);
 
+        //The 2 exmaple subscriptions
         SubscriptionModel model1 = new SubscriptionModel("Netflix Premium-£49.55");
         model1.setPlanCost(9.99);
         model1.setLast30Hours(80);
@@ -30,6 +32,9 @@ public class BreakdownActivity extends AppCompatActivity {
         model2.setPlanCost(5.99);
         model2.setLast30Hours(13);
         model2.setMoneySpentThisYear(11.98);
+
+        //The next section displays the money spend on the subscriptions this year, compares with
+        //pie chart.
         double total = model1.getMoneySpentThisYear() + model2.getMoneySpentThisYear();
         double model1Percent =model1.getMoneySpentThisYear()/total;
         double model2Parcent = 1- model1Percent;
@@ -39,7 +44,6 @@ public class BreakdownActivity extends AppCompatActivity {
         valueList.add(new PieEntry((float) model2Parcent, model2.getPlanName()));
 
         PieDataSet dataSet = new PieDataSet(valueList, "subscriptions 2020 ");
-
 
         PieData pieData = new PieData(dataSet);
         pie.setUsePercentValues(true);
