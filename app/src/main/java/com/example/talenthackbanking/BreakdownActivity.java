@@ -38,7 +38,7 @@ public class BreakdownActivity extends AppCompatActivity {
         valueList.add(new PieEntry((float) model1Percent, model1.getPlanName()));
         valueList.add(new PieEntry((float) model2Parcent, model2.getPlanName()));
 
-        PieDataSet dataSet = new PieDataSet(valueList, "subscriptions ");
+        PieDataSet dataSet = new PieDataSet(valueList, "subscriptions 2020 ");
 
         PieData pieData = new PieData(dataSet);
 

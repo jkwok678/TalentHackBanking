@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#217b86">
 
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="177dp"
+        android:layout_height="471dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="225dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:srcCompat="@drawable/einstein" />
 
     <TextView
         android:id="@+id/speech"
-        android:layout_width="89dp"
-        android:layout_height="73dp"
+        android:layout_width="173dp"
+        android:layout_height="134dp"
         android:text="Hi I'm your helpful subscription specialist!"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
@@ -19,8 +31,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="220dp"
-        android:layout_height="422dp"
+        android:layout_width="288dp"
+        android:layout_height="462dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.916"
@@ -31,24 +43,15 @@
 
     <Button
         android:id="@+id/continueButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="87dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/imageView6"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="#17464C"
+        android:text="Click here for Assistance"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="226dp"
-        android:layout_height="510dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="132dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView3"
-        app:srcCompat="@drawable/einstein" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
