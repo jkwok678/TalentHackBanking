@@ -35,5 +35,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        final Button button3 = findViewById(R.id.goVisualise2);
+        button3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View c) {
+                startActivity(new Intent(MainActivity.this, Breakdown2Activity.class));
+                // Code here executes on main thread after user presses button
+            }
+        });
+
     }
 }

@@ -32,4 +32,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="151dp" />
 
+    <Button
+        android:id="@+id/goVisualise2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Visualisation2"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="483dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

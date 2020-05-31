@@ -40,10 +40,14 @@ public class BreakdownActivity extends AppCompatActivity {
 
         PieDataSet dataSet = new PieDataSet(valueList, "subscriptions 2020 ");
 
-        PieData pieData = new PieData(dataSet);
 
+        PieData pieData = new PieData(dataSet);
+        pie.setUsePercentValues(true);
         pie.setData(pieData);
 
         dataSet.setColors(ColorTemplate.MATERIAL_COLORS);
+
+
+
     }
 }
