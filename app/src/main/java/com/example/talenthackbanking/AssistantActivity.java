@@ -52,11 +52,11 @@ public class AssistantActivity extends AppCompatActivity {
         model2.setMoneySpentThisYear(11.98);
 
         //Netflix cost per hour
-        text.add("Netflix is costing you $" + String.format("%.2f", model1.cost_per_hour()) +
+        text.add("Netflix is costing you $" + String.format("%.2f", model1.costPerHour()) +
                 " per hour");
 
         //Disney+ cost per hour
-        text.add("Disney+ is costing you $" + String.format("%.2f", model2.cost_per_hour()) +
+        text.add("Disney+ is costing you $" + String.format("%.2f", model2.costPerHour()) +
                 " per hour");
 
         int difference = model1.compareHours(model2);
