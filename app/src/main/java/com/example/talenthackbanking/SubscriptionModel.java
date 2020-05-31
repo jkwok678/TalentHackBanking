@@ -34,7 +34,7 @@ public class SubscriptionModel {
     }
 
 
-    public double cost_per_min() {
+    public double cost_per_hour() {
         return (this.planCost / this.last30Hours);
     }
 
