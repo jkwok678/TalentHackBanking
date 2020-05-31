@@ -19,10 +19,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Button button = findViewById(R.id.start);
+        final Button button = findViewById(R.id.goAssist);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, assistantActivity.class));
+                startActivity(new Intent(MainActivity.this, AssistantActivity.class));
+                // Code here executes on main thread after user presses button
+            }
+        });
+
+        final Button button2 = findViewById(R.id.goVisualise);
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View c) {
+                startActivity(new Intent(MainActivity.this, BreakdownActivity.class));
                 // Code here executes on main thread after user presses button
             }
         });

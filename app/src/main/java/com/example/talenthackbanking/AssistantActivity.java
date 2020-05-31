@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.HashMap;
 import java.util.Map;
 
-public class assistantActivity extends AppCompatActivity {
+public class AssistantActivity extends AppCompatActivity {
     static int counter = 0;
 
     @Override
